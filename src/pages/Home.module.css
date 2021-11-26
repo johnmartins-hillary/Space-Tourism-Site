@@ -102,6 +102,9 @@
 }
 
 @media only screen and (max-width: 751px) {
+  .grid header {
+    margin-top: 13rem;
+  }
   .paragraph {
     padding: 0 5%;
   }

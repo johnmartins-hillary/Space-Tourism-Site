@@ -89,6 +89,10 @@
   .big-dots {
     width: 80%;
   }
+
+  .carousel {
+    height: 400px;
+  }
 }
 @media only screen and (max-width: 376px) {
   .big-dots {
