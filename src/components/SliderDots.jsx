@@ -15,7 +15,7 @@ const SliderDots = forwardRef((props, ref) => {
     const clicked = event.target.dataset.number;
     setActiveDot(clicked);
     slideTo(Object.values(list.current.children), "x", clicked);
-    image.current.src = `/src/${data.crew[clicked].images.png}`;
+    image.current.src = `/dist/${data.crew[clicked].images.png}`;
     image.current.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1000 });
   };
 

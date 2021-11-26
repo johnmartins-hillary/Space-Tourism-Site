@@ -35,7 +35,7 @@ const Crew = () => {
           <img
             ref={image}
             id="crew-pic"
-            src="/src/assets/crew/image-douglas-hurley.png"
+            src="/dist/assets/crew/image-douglas-hurley.png"
             alt=""
           />
         </figure>

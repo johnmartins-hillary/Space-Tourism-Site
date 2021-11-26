@@ -95,6 +95,11 @@
     place-items: center;
   }
 }
+@media only screen and (max-width: 1351px) {
+  .paragraph {
+    padding: unset;
+  }
+}
 
 @media only screen and (max-width: 751px) {
   .paragraph {

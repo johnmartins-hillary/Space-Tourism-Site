@@ -33,7 +33,7 @@ const Destination = () => {
         <div className={classes.frame}>
           <img
             ref={image}
-            src={`/src/${destination.images.png}`}
+            src={`/dist/${destination.images.png}`}
             alt={destination.name}
           />
         </div>

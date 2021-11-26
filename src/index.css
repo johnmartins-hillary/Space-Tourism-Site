@@ -147,6 +147,10 @@ a:hover {
     font-size: 0.8em;
   }
 
+  section {
+    height: 1200px;
+  }
+
   section > h2 {
     margin-top: 25%;
     place-self: start;

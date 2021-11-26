@@ -43,7 +43,7 @@ const Technology = () => {
           <img
             ref={image}
             className="tech-pic"
-            src="/src/assets/technology/image-launch-vehicle-portrait.jpg"
+            src="/dist/assets/technology/image-launch-vehicle-portrait.jpg"
             alt="Space Technology"
           />
         </figure>
@@ -51,7 +51,7 @@ const Technology = () => {
         <figure className={classes["landscape-image"]}>
           <img
             ref={mobileImage}
-            src="/src/assets/technology/image-launch-vehicle-landscape.jpg"
+            src="/dist/assets/technology/image-launch-vehicle-landscape.jpg"
             alt="Space Technology"
           />
         </figure>
