@@ -17,11 +17,11 @@ const SliderBigDots = forwardRef((props, ref) => {
     console.log(clicked.dataset.number);
     slideTo(Object.values(list.current.children), "y", clicked.dataset.number);
 
-    mobileImage.current.src = `/public/${
+    mobileImage.current.src = `/${
       data.technology[clicked.dataset.number].images.landscape
     }`;
 
-    image.current.src = `/public/${
+    image.current.src = `/${
       data.technology[clicked.dataset.number].images.portrait
     }`;
   };
