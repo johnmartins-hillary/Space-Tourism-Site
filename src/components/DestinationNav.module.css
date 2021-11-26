@@ -1,0 +1,34 @@
+.mini-nav {
+  width: 250px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini-nav button {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+  color: var(--primary);
+}
+
+.mini-nav button:hover {
+  text-decoration: underline;
+  text-decoration-color: #979797;
+  text-underline-offset: 15px;
+  text-decoration-thickness: 3px;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-color: var(--white);
+  text-underline-offset: 15px;
+  text-decoration-thickness: 3px;
+  outline: none;
+}
+
+.mini-nav .active:hover {
+  text-decoration-color: var(--white);
+}
+
+@media only screen and (max-width: 575px) {
+}

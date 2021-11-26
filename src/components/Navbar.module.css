@@ -1,0 +1,132 @@
+.desktop-nav {
+  height: 80px;
+  margin-top: 30px;
+
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  padding-left: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-line {
+  width: 40%;
+  height: 1px;
+  transform: translateX(3rem);
+  z-index: 1;
+}
+
+.nav-links {
+  width: 55%;
+  height: 100%;
+  padding: 0 5%;
+  background-color: rgba(128, 128, 128, 0.171);
+
+  display: flex;
+  justify-content: space-between;
+
+  backdrop-filter: blur(30px);
+}
+
+.nav-links a {
+  height: inherit;
+  margin: 0 1rem;
+
+  display: flex;
+  align-items: center;
+
+  transition: all 0.1s;
+}
+
+.nav-links a:hover {
+  border-bottom: 3px solid var(--white);
+  opacity: 0.6;
+}
+
+.nav-links span {
+  opacity: unset;
+  margin-right: 5px;
+}
+
+.mobile-navbar {
+  display: none;
+}
+
+.mobile-nav-links {
+  display: none;
+}
+
+@media only screen and (max-width: 1051px) {
+  .nav-links {
+    padding: unset;
+  }
+
+  .nav-line {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 941px) {
+  .nav-links {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-navbar {
+    position: fixed;
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .mobile-nav-links {
+    font-family: "Barlow Condensed", sans-serif;
+    position: fixed;
+    right: 0;
+    z-index: 2;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.171);
+    backdrop-filter: blur(30px);
+
+    display: flex;
+    flex-flow: column nowrap;
+    transform: translateX(100%);
+  }
+
+  .mobile-nav-links a {
+    padding: 2rem 0;
+  }
+
+  .mobile-nav-links span {
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
+
+  .close {
+    width: 100%;
+    padding-top: 2rem;
+    padding-right: 2rem;
+
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.active {
+  border-bottom: 3px solid var(--white);
+}

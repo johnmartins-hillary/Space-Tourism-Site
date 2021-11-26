@@ -1,0 +1,123 @@
+.crew-page {
+  background-image: url("./../assets/crew/background-crew-desktop.jpg");
+}
+
+.grid {
+  height: 100%;
+}
+
+.grid h2 {
+  grid-row: 1 / 2;
+}
+
+.grid .carousel {
+  position: relative;
+  grid-column: start / span 6;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+  margin-top: 20%;
+}
+
+.carousel li {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: all 0.2s;
+}
+
+.dots {
+  grid-column: start / span 6;
+  grid-row: 3/4;
+}
+
+.figure {
+  grid-column: col-start 7 / end;
+  grid-row: 1 / 4;
+
+  height: 100%;
+
+  display: grid;
+  place-items: end center;
+}
+
+@media only screen and (max-width: 1141px) {
+  .grid .carousel {
+    grid-column: start / col-end 8;
+  }
+
+  .figure {
+    grid-column: col-start 9 / end;
+  }
+}
+
+@media only screen and (max-width: 851px) {
+  .grid .carousel {
+    grid-column: start / col-end 9;
+  }
+
+  .figure {
+    grid-column: col-start 10 / end;
+  }
+
+  .figure img {
+    transform: scale(1.5);
+  }
+}
+
+@media only screen and (max-width: 771px) {
+  .grid .carousel {
+    grid-column: start / end;
+    grid-row: 2 / 3;
+    margin-top: 5%;
+    height: 275px;
+
+    text-align: center;
+  }
+
+  .carousel li {
+    padding: 0 3.5rem;
+  }
+
+  .dots {
+    grid-column: start / end;
+    grid-row: 3 / 4;
+    justify-self: center;
+
+    transform: translateY(-2rem);
+  }
+
+  .figure {
+    grid-row: 4 / 5;
+    grid-column: start / end;
+
+    width: 50%;
+    justify-self: center;
+  }
+
+  .figure img {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .figure {
+    grid-row: 2 / 3;
+    height: 300px;
+    width: 300px;
+    margin: 2rem 0;
+    width: 60%;
+  }
+
+  .grid .carousel {
+    grid-row: 4 / 5;
+    margin: unset;
+    margin-bottom: 10rem;
+  }
+
+  .dots {
+    transform: translateY(-2rem);
+    place-items: end center;
+  }
+}

@@ -1,0 +1,43 @@
+.dot-container {
+  margin-right: 5rem;
+
+  height: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.dot-container button {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  color: var(--white);
+  font-family: "Bellefair", sans-serif;
+  font-size: var(--heading-4);
+  opacity: 0.5;
+}
+
+.dot-container button:hover,
+.dot-container .active:hover {
+  opacity: 1;
+}
+
+.dot-container .active {
+  background-color: var(--white);
+  opacity: 1;
+  color: var(--black);
+}
+
+@media only screen and (max-width: 771px) {
+  .dot-container {
+    margin-right: unset;
+
+    height: unset;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}

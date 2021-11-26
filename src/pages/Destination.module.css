@@ -1,0 +1,53 @@
+.destination-page {
+  background-image: url("./../assets/destination/background-destination-desktop.jpg");
+}
+
+.grid .frame {
+  grid-column: start / span 6;
+
+  display: grid;
+  place-items: center;
+}
+
+.grid .destination {
+  margin-top: 10%;
+  grid-column: col-start 8 / end;
+}
+
+.destination h1 {
+  margin-top: 10%;
+}
+
+.destination hr {
+  margin-top: 10%;
+}
+
+.destination-stats-box {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 771px) {
+  .grid .frame {
+    grid-column: start / end;
+    place-self: center;
+
+    width: 50%;
+    margin-top: 4rem;
+  }
+
+  .grid .destination {
+    margin-top: 10%;
+    text-align: center;
+    grid-column: start / end;
+    padding: 0 1rem 3rem;
+
+    display: grid;
+  }
+
+  .mini-nav {
+    place-self: center;
+  }
+}

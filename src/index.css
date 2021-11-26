@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #0b0d17;
+  --white: #fff;
+  --primary: #d0d6f9;
+
+  --heading-1: 9.375rem;
+  --heading-2: 6.25rem;
+  --heading-3: 3.5rem;
+  --heading-4: 2rem;
+  --heading-5: 1.75rem;
+
+  --subheading-1: 1.75rem;
+  --subheading-2: 0.875rem;
+
+  --paragraph: 1.125rem;
+}
+
+body {
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bellefair", sans-serif;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  font-size: var(--paragraph);
+  color: var(--primary);
+  line-height: 32px;
+  margin-top: 1rem;
+}
+
+main {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  max-height: 100vh;
+
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns:
+    [margin-start] minmax(25px, 5%) [start] repeat(
+      12,
+      [col-start] 1fr [col-end]
+    )
+    [end] minmax(25px, 5%) [margin-end];
+
+  grid-auto-rows: 1fr;
+
+  grid-column-gap: 12px;
+}
+
+section > h2 {
+  grid-column: start / end;
+  margin-top: 15rem;
+}
+
+span {
+  margin-right: 2rem;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+a {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 2.7px;
+  margin: 0 1rem;
+
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+/* MAIN CLASSES */
+
+.heading-2 {
+  font-size: var(--heading-2);
+}
+
+.heading-3 {
+  font-size: var(--heading-3);
+}
+
+.heading-4 {
+  font-size: var(--heading-4);
+  font-family: "Bellefair", sans-serif;
+}
+
+.heading-5 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: var(--heading-5);
+  color: var(--primary);
+  font-weight: 400;
+  letter-spacing: 4.75px;
+  opacity: 0.8;
+}
+
+.sub-heading-1 {
+  font-size: var(--subheading-1);
+  font-family: "Bellefair", sans-serif;
+}
+
+.sub-heading-2 {
+  font-size: var(--subheading-2);
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 771px) {
+  html {
+    font-size: 0.8em;
+  }
+
+  section > h2 {
+    margin-top: 25%;
+    place-self: start;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  html {
+    font-size: 0.65em;
+  }
+  section {
+    grid-template-columns:
+      [margin-start] 10px [start] repeat(8, [col-start] 1fr [col-end])
+      [end] 10px [margin-end];
+
+    column-gap: 5px;
+  }
+
+  section > h2 {
+    margin-top: 35%;
+    place-self: center;
+  }
+}
