@@ -101,6 +101,21 @@
   }
 }
 
+@media only screen and (max-width: 676px) {
+  .grid .carousel {
+    height: 375px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid .carousel {
+    grid-column: margin-start / margin-end;
+  }
+
+  .carousel li {
+    padding: unset;
+  }
+}
 @media only screen and (max-width: 376px) {
   .figure {
     grid-row: 2 / 3;
